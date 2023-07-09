@@ -44,4 +44,15 @@ jobs:
       - name: list files in the reposiotory
         run: |
           ls ${{ github.workspace }}
+          
+      - name: setup dotnet on runner
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '3.x'
+          
+      - name: display dotnot version
+        run: dotnet --version
+     
+      
+        
      
