@@ -39,6 +39,8 @@ jobs:
       
       - run: echo "the job was triggered by a ${{ github.event_name }} event"
       
+      - run: echo "the path ${{ github.workspace }}"
+      
       - name: list files in the reposiotory
         run: |
           ls ${{ github.workspace }}
