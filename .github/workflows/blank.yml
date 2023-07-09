@@ -35,7 +35,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: run grthub reposiotry name
-        run: echo "the ${{ github.reposiotry }} repository has been updated"
+        run: echo "the ${{ github.repository }} repository has been updated"
       
       - run: echo "the job was triggered by a ${{ github.event_name }} event"
      
