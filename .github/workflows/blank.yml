@@ -38,4 +38,8 @@ jobs:
         run: echo "the ${{ github.repository }} repository has been updated"
       
       - run: echo "the job was triggered by a ${{ github.event_name }} event"
+      
+      - name: list files in the reposiotory
+        run: |
+          ls ${{ github.workspace }}
      
