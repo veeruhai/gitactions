@@ -61,6 +61,7 @@ jobs:
   build2:
     runs-on: ubuntu-latest
     environment: Dev
+    needs: build
     env:
     # Setting an environment variable with the value of a configuration variable
       env_var: ${{ vars.URL}}
