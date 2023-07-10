@@ -57,18 +57,19 @@ jobs:
       - name: display dotnot version
         run: dotnet --version
         
-      - name: install node js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18.0
-          
-      - name: display node version
-        run: node --version
+        
+  build2:
+    runs-on: ubuntu-latest
+    env:
+    # Setting an environment variable with the value of a configuration variable
+      env_var: ${{ vars.ENV_CONTEXT_VAR }}
+    steps:
+      - uses: actions/checkout@v3
       
-      - name: setup python
-        uses: actions/setup-python@v3
-      - name: disply python version
-        run: python --version
+      - name: access enviorment vairable
+        run: echo "the development env ${{env.env_var}} "
+  
+
         
      
       
